@@ -1,0 +1,49 @@
+body{
+    background-color: darkcyan;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding: 10%;
+}
+
+h1 {
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+ul {
+    text-align: left;
+    margin-top: 20px;
+}
+
+li{
+    color: #ffffff;
+    list-style: none;
+}
+
+input{
+    border-radius: 5px;
+    padding: 5px;
+    height: 25px;
+    border: none;
+    margin: 0px;
+}
+
+li > button {
+    background: none;
+    margin-left: 1rem;
+    border: #f70808 solid 1px;
+    color: #f70808;
+}
+
+.btnadd{
+    background-color: darkorange;
+    border: none;
+    border-radius: 1rem;
+    font-family: sans-serif;
+    color: #ffffff;
+}
+
+.delete {
+    display: none;
+}
