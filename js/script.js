@@ -12,7 +12,6 @@ function createList(){
     li.appendChild(document.createTextNode(input.value));
     ul.appendChild(li);
     input.value = "";
-    //dar um console.log(input.value) p/ verificar se está pegando o valor
 
     var deleteBtn = document.createElement("button");
     deleteBtn.appendChild(document.createTextNode("X"));
@@ -28,13 +27,21 @@ enterButton.addEventListener("click", addListWithEnter);
 input.addEventListener("keypress", addListKeypress);
 
 function addListWithEnter(){
-    if (inputLength() > 3){
-        createList();
+    if(ValidInputValue())    
+        if (inputLength() > 3)
+            createList();
     }
-}
+
+    function ValidInputValue()
+    {
+        return input.value.trim() == null || input.value.trim() == "" ? false : true;
+    }
+
 
 function addListKeypress(){
-    if(inputLength() > 3, event.which === 13){
-        createList();
+    if(ValidInputValue())
+        if(inputLength() > 3, event.which === 13){
+            // if(inputLength() > 3, event.Key == Enter)
+            createList();
     }
 }
